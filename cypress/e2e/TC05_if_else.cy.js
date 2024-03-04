@@ -1,8 +1,10 @@
 describe('Example to demo conditional testing in cypress', () => {
+
     beforeEach(() => {
         cy.visit('https://wikipedia.org')
     })
 
+    //testcase
     it('Check that if you find WikiVoyage on the page, then click on it and validate (Go to If)', () => {
         cy.title().should('eq', 'Wikipedia')
         cy.get('body').then((body) => {
