@@ -1,10 +1,6 @@
 describe('Example to demonstrate the use each in Cypress',function(){
 
-
-    // before(function () {
-    //     cy.visit('https://opensource-demo.orangehrmlive.com/')
-    // })
-
+    
     beforeEach(function () {
         cy.fixture('testdata').then(function (testdata) {
             this.testdata = testdata
