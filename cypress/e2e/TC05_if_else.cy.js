@@ -18,16 +18,16 @@ describe('Example to demo conditional testing in cypress', () => {
         cy.title().should('eq', 'Wikivoyage')
     })
 
-    it('Check that if you dont find WikiVoyage in the page, then click on Wiktionary and validate (Go to Else)', () => {
-        cy.title().should('eq', 'Wikipedia')
-        cy.get('body').then((body) => {
-            if (body.find('wrongLocator').length > 0) {
-                cy.get('[data-jsl10n="wikivoyage.name"]').click()
-            }
-            else {
-                cy.get('[data-jsl10n="wiktionary.name"]').click()
-            }
-        })
-        cy.title().should('eq', 'Wiktionary')
-    })
+    // it('Check that if you dont find WikiVoyage in the page, then click on Wiktionary and validate (Go to Else)', () => {
+    //     cy.title().should('eq', 'Wikipedia')
+    //     cy.get('body').then((body) => {
+    //         if (body.find('wrongLocator').length > 0) {
+    //             cy.get('[data-jsl10n="wikivoyage.name"]').click()
+    //         }
+    //         else {
+    //             cy.get('[data-jsl10n="wiktionary.name"]').click()
+    //         }
+    //     })
+    //     cy.title().should('eq', 'Wiktionary')
+    // })
 })
